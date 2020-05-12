@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author Tao
+ * @author 田震
  * @version 1.0
  * @ClassName HelloController
- * @Description TODO
  * @date 2020-05-11 20:29
  **/
 @RestController
