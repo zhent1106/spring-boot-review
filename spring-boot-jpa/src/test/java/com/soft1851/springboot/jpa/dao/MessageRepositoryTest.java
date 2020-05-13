@@ -1,7 +1,6 @@
 package com.soft1851.springboot.jpa.dao;
 
 import com.soft1851.springboot.jpa.model.Message;
-import com.soft1851.springboot.jpa.service.MessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,8 +65,8 @@ class MessageRepositoryTest {
         messageRepository.deleteAllInBatch();
     }
 
-    @Autowired
-    private MessageService messageService;
+//    @Autowired
+//    private MessageService messageService;
 
     @Test
     public void testUpdate() {
@@ -76,11 +75,11 @@ class MessageRepositoryTest {
                 .msgText("后端架构").msgSummary("SpringCloud").build();
         messageRepository.saveAndFlush(message);
 
-        // 批量更新
-        List<Message> messages = new ArrayList<>();
-        messages.add(Message.builder().msgId(5).msgText("workday").msgSummary("study").build());
-        messages.add(Message.builder().msgId(6).msgText("weekend").msgSummary("play").build());
-        messageService.batchUpdate(messages);
+//        // 批量更新
+//        List<Message> messages = new ArrayList<>();
+//        messages.add(Message.builder().msgId(5).msgText("workday").msgSummary("study").build());
+//        messages.add(Message.builder().msgId(6).msgText("weekend").msgSummary("play").build());
+//        messageRepository.batchUpdate(messages);
     }
 
     @Test

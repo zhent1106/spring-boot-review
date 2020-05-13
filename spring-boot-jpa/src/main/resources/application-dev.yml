@@ -1,9 +1,9 @@
 server:
   port: 8080
 
-##日志配置
-#logging:
-  config: classpath:logback-config.xml
+###日志配置
+##logging:
+#  config: classpath:logback-config.xml
 
 # 单数据源配置
 spring:

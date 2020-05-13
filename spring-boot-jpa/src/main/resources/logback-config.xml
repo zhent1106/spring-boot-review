@@ -45,7 +45,7 @@
         </rollingPolicy>
     </appender>
 
-    <logger name="com.soft1851.spring.orm">
+    <logger name="com.soft1851.springboot.jpa">
         <level value="INFO" />
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
