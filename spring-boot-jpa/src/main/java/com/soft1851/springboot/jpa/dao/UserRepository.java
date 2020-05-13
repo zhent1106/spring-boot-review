@@ -1,5 +1,6 @@
 package com.soft1851.springboot.jpa.dao;
 
+
 import com.soft1851.springboot.jpa.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -10,10 +11,11 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
+ * @author 田震
+ * @version 1.0
  * @ClassName UserRepository
  * @Description TODO
- * @Author 田震
- * @Date 2020/5/13
+ * @date 2020-05-13 15:29
  **/
 public interface UserRepository extends JpaRepository<User,Long> {
     /**
@@ -68,6 +70,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
     @Transactional(rollbackFor = RuntimeException.class)
     @Modifying
     @Query(value = "insert into test.user(user_name,password,email) value (:userName, :password, :email)",nativeQuery = true)
-    int insertUser(@Param("userName") String userName, @Param("password") String password, @Param("email") String email);
+    int insertUser(@Param("userName") String userName,@Param("password") String password,@Param("email") String email);
 
 }

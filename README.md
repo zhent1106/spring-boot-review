@@ -21,3 +21,23 @@
        HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。
 
        Truststore and Keystore：主要用于Java中存储证书，它们之间的区别是truststore用于存储public证书，而keystore用于存储private证书
+       
+       
+ 
+ ### Spring Boot Jpa
+ 
+        And： 等价于 SQL 中的 and 关键字，比如 findByMsgTextAndMsgSummary(String msgText, String msgSummary)；
+        Or： 等价于 SQL 中的 or 关键字，比如 findByMsgTextOrMsgSummary(String msgText, String msgSummary)；
+        Between： 等价于 SQL 中的 between 关键字，比如 findByMsgIdBetween(int max, int min)；
+        LessThan： 等价于 SQL 中的 "<"
+        GreaterThan： 等价于 SQL 中的">"
+        IsNull： 等价于 SQL 中的 "is null"
+        IsNotNull： 等价于 SQL 中的 "is not null"
+        NotNull： 与 IsNotNull 等价；
+        Like： 等价于 SQL 中的 "like"
+        NotLike： 等价于 SQL 中的 "not like"
+        OrderBy： 等价于 SQL 中的 "order by"
+        Not： 等价于 SQL 中的 "！ ="
+        In： 等价于 SQL 中的 "in"， 方法的参数可以是 Collection 类型，也可以是数组或者不定长参数；
+        NotIn： 等价于 SQL 中的 "not in"，方法的参数可以是 Collection 类型，也可以是数组或者不定长参数；   
+       

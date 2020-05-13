@@ -21,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @Slf4j
 @SpringBootTest
 class UserRepositoryTest {
-
     @Resource
     private UserRepository userRepository;
 
@@ -38,7 +37,7 @@ class UserRepositoryTest {
         userRepository.save(user);
 
         List<User> userList = new ArrayList<>();
-        for (int i = 1; i <= 22;i++){
+        for (int i = 1; i <= 20 ;i++){
             User user1 = User.builder()
                     .userName("user"+i)
                     .email("user"+i+"@126.com")
@@ -50,7 +49,7 @@ class UserRepositoryTest {
             userList.add(user1);
         }
         userRepository.saveAll(userList);
-        assertEquals(22,userRepository.findAll().size());
+        assertEquals(21,userRepository.findAll().size());
     }
 
     @Test
@@ -128,4 +127,5 @@ class UserRepositoryTest {
         Optional<User> optionalUser = userRepository.findOne(Example.of(user1));
         log.info("单个查询结果: {}",optionalUser.orElse(null));
     }
+
 }

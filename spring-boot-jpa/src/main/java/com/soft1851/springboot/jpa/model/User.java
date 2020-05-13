@@ -9,19 +9,23 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- * @author: 田震
- * @date: 2020/5/12
- * @description:
- */
+ * @author zhent1106
+ * @version 1.0
+ * @ClassName User
+ * @Description
+ * unique唯一约束 四种主键生成策略：
+ * TABLE, //使用一个额外的数据库表来保存主键
+ * SEQUENCE,//使用序列的方式，且其底层数据库要支持序列，一般有postgres、Oracle等
+ * IDENTITY,//主键由数据库生成，一般为自增型主键，支持的有MySql和Sql Server
+ * AUTO//由程序来决定主键规则
+ * @date 2020-05-13 15:12
+ **/
+@Entity
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@NoArgsConstructor
 public class User {
-    /**
-     * 主键，策略为自增
-     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,13 +33,13 @@ public class User {
     /**
      * nullable = false为非空约束，unique = true是唯一约束
      */
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false,unique = true)
     private String userName;
 
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false,unique = true)
     private String email;
 
     @Column(length = 32)
@@ -46,17 +50,4 @@ public class User {
 
     @Column
     private LocalDateTime regTime;
-
-//    // 1、关系维护端，负责多对多关系的绑定和解除
-//    // 2、@JoinTable注解的name属性指定关联表的名字，joinColumns指定外键的名字，关联到关系维护端(User)
-//    // 3、inverseJoinColumns指定外键的名字，要关联的关系被维护端(Authority)
-//    // 4、其实可以不使用@JoinTable注解，默认生成的关联表名称为主表表名+下划线+从表表名，
-//    // 即表名为user_authority
-//    // 关联到主表的外键名：主表名+下划线+主表中的主键列名,即user_id
-//    // 关联到从表的外键名：主表中用于关联的属性名+下划线+从表的主键列名,即authority_id
-//    // 主表就是关系维护端对应的表，从表就是关系被维护端对应的表
-//    @ManyToMany
-//    @JoinTable(name = "user_authority", joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "authority_id"))
-//    private List<Authority> authorityList;
 }
