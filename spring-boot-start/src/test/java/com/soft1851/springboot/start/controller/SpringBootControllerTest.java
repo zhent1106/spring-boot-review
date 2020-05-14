@@ -30,6 +30,6 @@ class SpringBootControllerTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("Hello, Spring!"));
+                        .string("Hello, Spring Boot!"));
     }
 }

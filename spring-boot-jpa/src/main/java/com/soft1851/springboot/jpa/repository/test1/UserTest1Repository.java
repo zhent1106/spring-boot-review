@@ -1,5 +1,4 @@
-package com.soft1851.springboot.jpa.dao;
-
+package com.soft1851.springboot.jpa.repository.test1;
 
 import com.soft1851.springboot.jpa.model.User;
 import org.springframework.data.domain.Page;
@@ -14,13 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @author 田震
- * @version 1.0
- * @ClassName UserRepository
+ * @ClassName UserTest1Repository
  * @Description TODO
- * @date 2020-05-13 15:29
+ * @Author 田震
+ * @Date 2020/5/14
  **/
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface UserTest1Repository  extends JpaRepository<User, Long> {
     /**
      * 按userName和password相等查询唯一记录
      *
@@ -122,8 +120,5 @@ public interface UserRepository extends JpaRepository<User,Long> {
      * @return
      */
     Slice<User> findByNickNameAndEmail(String nickName, String email, Pageable pageable);
-
-
-
 
 }

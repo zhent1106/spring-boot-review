@@ -1,6 +1,5 @@
 package com.soft1851.springboot.jpa.dao;
 
-
 import com.soft1851.springboot.jpa.model.Message;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

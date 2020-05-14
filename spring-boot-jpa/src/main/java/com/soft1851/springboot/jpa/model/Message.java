@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 /**
- * @author zhent1106
+ * @author 田震
  * @version 1.0
  * @ClassName Message
  * @Description TODO

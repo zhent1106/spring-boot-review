@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author 田震
+ * @author Tao
  * @version 1.0
  * @ClassName SwaggerConfiguration
  * @Description swagger配置
@@ -36,7 +36,7 @@ public class SwaggerConfiguration {
                 .title("swagger-bootstrap-ui RESTful APIs")
                 .description("swagger-bootstrap-ui")
                 .termsOfServiceUrl("http://localhost:8080/")
-                .contact(new Contact("zhent1106","https://github.com/zhent1106","1299088269@qq.com"))
+                .contact(new Contact("tao","https://github.com/taoyongxin","1427177855@qq.com"))
                 .version("1.0")
                 .build();
     }
