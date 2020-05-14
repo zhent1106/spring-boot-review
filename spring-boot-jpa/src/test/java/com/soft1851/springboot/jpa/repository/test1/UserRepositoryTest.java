@@ -1,6 +1,7 @@
-package com.soft1851.springboot.jpa.dao;
+package com.soft1851.springboot.jpa.repository.test1;
 
 import com.soft1851.springboot.jpa.model.User;
+import com.soft1851.springboot.jpa.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

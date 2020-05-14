@@ -1,3 +1,4 @@
-#spring:
-#  profiles:
-#    active: dev
+spring:
+  profiles:
+    active: prod  #单数据源
+#   active: dev  #多数据源

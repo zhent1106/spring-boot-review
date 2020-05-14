@@ -1,6 +1,7 @@
-package com.soft1851.springboot.jpa.dao;
+package com.soft1851.springboot.jpa.repository.test1;
 
 import com.soft1851.springboot.jpa.model.UserDetail;
+import com.soft1851.springboot.jpa.repository.UserDetailRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class UserDetailRepositoryTest {
 @Resource
-private  UserDetailRepository userDetailRepository;
+private UserDetailRepository userDetailRepository;
     @Test
     void name() {
         List<UserDetail> userList = new ArrayList<>();

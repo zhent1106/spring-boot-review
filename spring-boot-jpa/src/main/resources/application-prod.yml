@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-jpa
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test1?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      maximumPoolSize: 15
+      max-lifetime: 1800000
+      minimum-idle: 2
+      idle-timeout: 60000
+      connection-timeout: 30000

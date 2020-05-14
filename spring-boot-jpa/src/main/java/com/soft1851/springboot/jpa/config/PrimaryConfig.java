@@ -23,13 +23,13 @@ import java.util.Objects;
  * @Author 田震
  * @Date 2020/5/14
  **/
-@Configuration
-@EnableTransactionManagement
-@EnableJpaRepositories(
-        entityManagerFactoryRef = "entityManagerFactoryPrimary",
-        transactionManagerRef = "transactionManagerPrimary",
-        //设置dao（repo）所在位置
-        basePackages = {"com.soft1851.springboot.jpa.repository.test1"})
+//@Configuration
+//@EnableTransactionManagement
+//@EnableJpaRepositories(
+//        entityManagerFactoryRef = "entityManagerFactoryPrimary",
+//        transactionManagerRef = "transactionManagerPrimary",
+//        //设置dao（repo）所在位置
+//        basePackages = {"com.soft1851.springboot.jpa.repository.test1"})
 public class PrimaryConfig {
     @Resource
     @Qualifier("primaryDataSource")

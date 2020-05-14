@@ -54,8 +54,10 @@ class UserTest1RepositoryTest {
     void testSelectAll() {
         List<User> list1 = userTest1Repository.findAll();
         log.info(String.valueOf(list1.size()));
+        log.info(String.valueOf(list1));
         List<User> list2 = userTest2Repository.findAll();
         log.info(String.valueOf(list2.size()));
+        log.info(String.valueOf(list2));
     }
 
 }
