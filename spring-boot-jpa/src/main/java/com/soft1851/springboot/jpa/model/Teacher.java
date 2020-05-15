@@ -12,7 +12,7 @@ import javax.persistence.*;
  **/
 @Entity
 @Data
-public class Teacher {
+public class Teacher<List> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -24,7 +24,7 @@ public class Teacher {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "clazz_id", referencedColumnName = "id")
     private Clazz clazz;
-    //    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//        @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private List<Student> students;
 
 }

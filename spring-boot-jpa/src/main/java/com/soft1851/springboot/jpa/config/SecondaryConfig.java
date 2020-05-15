@@ -25,7 +25,7 @@ import java.util.Objects;
 //@EnableJpaRepositories(
 //        entityManagerFactoryRef = "entityManagerFactorySecondary",
 //        transactionManagerRef = "transactionManagerSecondary",
-//        basePackages = {"com.soft1851.springboot.jpa.repository.test2"})
+//        basePackages = {"com.soft1851.springboot.jpa.dao.test2"})
 public class SecondaryConfig {
     @Resource
     @Qualifier("secondaryDataSource")

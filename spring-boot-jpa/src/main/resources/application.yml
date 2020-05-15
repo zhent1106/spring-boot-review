@@ -1,4 +1,6 @@
 spring:
   profiles:
-    active: prod  #单数据源
-#   active: dev  #多数据源
+    active: prod
+
+
+    #prod 单数据源  dev:多数据源

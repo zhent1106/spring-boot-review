@@ -1,4 +1,4 @@
-package com.soft1851.springboot.jpa.repository.test2;
+package com.soft1851.springboot.jpa.dao.test2;
 
 import com.soft1851.springboot.jpa.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package com.soft1851.springboot.jpa.repository.test1;
+package com.soft1851.springboot.jpa.dao.test1;
 
 import com.soft1851.springboot.jpa.model.User;
 import org.springframework.data.domain.Page;

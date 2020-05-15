@@ -33,3 +33,25 @@
          @Scheduled(fixedRate = 6000)：上一次开始执行时间点之后 6 秒再执行。
          @Scheduled(fixedDelay = 6000)：上一次执行完毕时间点之后 6 秒再执行。
          @Scheduled(initialDelay=1000, fixedRate=6000)：第一次延迟 1 秒后执行，之后按 fixedRate 的规则每 6 秒执行一次。
+         
+         
+
+### 常见的邮件服务器扩展
+         
+         （SMTP、POP3）地址、端口如下：
+         
+         gmail(http://google.com) POP3服务器地址:http://pop.gmail.com（SSL启用 端口：995） SMTP服务器地址:http://smtp.gmail.com（SSL启用 端口：587）
+         
+         Foxmail: POP3服务器地址:http://pop.foxmail.com（端口：110） SMTP服务器地址:http://smtp.foxmail.com（端口：25）
+         
+         sina.com: POP3服务器地址:http://pop3.sina.com.cn（端口：110） SMTP服务器地址:http://smtp.sina.com.cn（端口：25）
+         
+         163.com: POP3服务器地址:http://pop.163.com（端口：110） SMTP服务器地址:http://smtp.163.com（端口：25）
+         
+         QQ邮箱 POP3服务器地址:http://pop.qq.com（端口：110） SMTP服务器地址:http://smtp.qq.com（端口：25）
+         
+         QQ企业邮箱 POP3服务器地址:http://pop.exmail.qq.com（端口：995） SMTP服务器地址:http://smtp.exmail.qq.com（端口：587/465）
+         
+         HotMail POP3服务器地址:http://pop.live.com（端口：995） SMTP服务器地址:http://smtp.live.com（端口：587）
+         
+         sohu.com: POP3服务器地址:http://pop3.sohu.com（端口：110） SMTP服务器地址:http://smtp.sohu.com（端口：25）       

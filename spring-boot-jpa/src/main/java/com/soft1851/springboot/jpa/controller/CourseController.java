@@ -22,7 +22,7 @@ public class CourseController {
     private CourseRepository courseRepository;
 
     @GetMapping()
-    public Course findCourse(@RequestParam("courseName") String courseName) {
+    public Course findCourse(@RequestParam("course") String courseName) {
         return courseRepository.findCourseByCourseName(courseName);
     }
 }
