@@ -3,11 +3,9 @@ package com.soft1851.springboot.task.task;
 import com.soft1851.springboot.task.repository.CronRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -21,8 +19,7 @@ import java.util.concurrent.Executors;
  * @Date 2020/5/15
  **/
 @Slf4j
-@Component
-@Configuration
+//@Configuration
 public class AutoTask  implements SchedulingConfigurer {
     @Resource
     private CronRepository cronRepository;

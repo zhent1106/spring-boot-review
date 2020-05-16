@@ -55,3 +55,12 @@
          HotMail POP3服务器地址:http://pop.live.com（端口：995） SMTP服务器地址:http://smtp.live.com（端口：587）
          
          sohu.com: POP3服务器地址:http://pop3.sohu.com（端口：110） SMTP服务器地址:http://smtp.sohu.com（端口：25）       
+         
+### 整合Quartz
+#####主要 API包括：
+         Scheduler：Scheduler翻译成调度器，Quartz通过调度器来注册、暂停、删除Trigger和JobDetail。Scheduler还拥有一个SchedulerContext，顾名思义就是上下文，通过SchedulerContext我们可以获取到触发器和任务的一些信息。
+         Job：Job可以定义setter(也就是set方法)来注入配置信息。也可以用同样的方法注入普通的bean。
+         JobDetail：Job接口是真正需要执行的任务。JobDetail接口相当于将Job接口包装了一下，Trigger和Scheduler实际用到的都是JobDetail。
+         Trigger：Trigger可以翻译成触发器，通过cron表达式或是SimpleScheduleBuilder等类，指定任务执行的周期。系统时间走到触发器指定的时间的时候，触发器就会触发任务的执行。
+         JobBuilder：用于定义或创建 JobDetail 的实例。
+         TriggerBuilder：用于定义或创建触发器实例。

@@ -25,3 +25,21 @@ spring:
       minimum-idle: 2
       idle-timeout: 60000
       connection-timeout: 30000
+#  quartz:
+#    properties:
+#      org:
+#        quartz:
+#          scheduler:
+#            instanceName: clusteredScheduler #调度器的实例名
+#            instanceId: AUTO #调度器编号自动生成
+#          jobStore:
+#            class: org.quartz.impl.RAMJobStore #作业存储类型为内存式
+#            isClustered: false #是否开启分布式部署
+#            useProperties: false
+#          threadPool:
+#            class: org.quartz.simpl.SimpleThreadPool #自带的线程池实现类
+#            threadCount: 10 #开启10个线程
+#            threadPriority: 5 #工作者线程的优先级
+#            threadsInheritContextClassLoaderOfInitializingThread: true
+#    # 数据存储方式为内存
+#    job-store-type: memory
