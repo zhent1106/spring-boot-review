@@ -41,3 +41,27 @@
         In： 等价于 SQL 中的 "in"， 方法的参数可以是 Collection 类型，也可以是数组或者不定长参数；
         NotIn： 等价于 SQL 中的 "not in"，方法的参数可以是 Collection 类型，也可以是数组或者不定长参数；   
        
+       
+       
+  ### Springboot工程实践
+   1.区分内部和外部接口
+   
+      ```
+      // 外部接口的 URL 路径以 /external/ 作为前缀
+      @Controller
+      public class ExternalApiController {
+          @GetMapping("/external/hello")
+          public ResponseEntity<String> hello() {
+              return ResponseEntity.ok("Hello stranger");
+          }
+      }
+      
+      // 内部接口的 URL 路径以 /internal/ 作为前缀
+      @Controller
+      public class InternalApiController {
+          @GetMapping("/internal/hello")
+          public ResponseEntity<String> hello() {
+              return ResponseEntity.ok("Hello friend");
+          }
+      }
+      ```
