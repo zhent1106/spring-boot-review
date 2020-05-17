@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
  * @Author 田震
  * @Date 2020/5/16
  **/
-@Component
+//@Component
 public class AsyncTask {
     public static Random random =new Random();
 

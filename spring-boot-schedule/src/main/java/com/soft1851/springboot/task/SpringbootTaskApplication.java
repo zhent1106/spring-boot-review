@@ -10,9 +10,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * 开启定时
  */
 @EnableScheduling
-/**
- * 开启异步任务注解
- */
+///**
+// * 开启异步任务注解
+// */
 @EnableAsync
 public class SpringbootTaskApplication {
 

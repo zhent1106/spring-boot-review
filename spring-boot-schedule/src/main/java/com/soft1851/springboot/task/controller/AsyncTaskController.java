@@ -2,6 +2,7 @@ package com.soft1851.springboot.task.controller;
 
 import com.soft1851.springboot.task.service.AsyncTaskService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,11 @@ public class AsyncTaskController {
     public  String asyncTask(){
         asyncTaskService.asyncTask();
         return "异常任务测试...";
+    }
+    @PostMapping("/file")
+    public String uploadFile() {
+        asyncTaskService.asyncTask();
+        log.info("=======================》》主线程："+Thread.currentThread().getName());
+        return "文件正在解析";
     }
 }
