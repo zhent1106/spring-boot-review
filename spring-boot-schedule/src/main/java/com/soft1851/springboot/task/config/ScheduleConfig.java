@@ -1,6 +1,7 @@
 package com.soft1851.springboot.task.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
@@ -13,7 +14,7 @@ import java.util.concurrent.Executors;
  * @Author 田震
  * @Date 2020/5/14
  **/
-//@Configuration
+@Configuration
 public class ScheduleConfig implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {

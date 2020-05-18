@@ -19,6 +19,7 @@ public class TrustedEndpointsFilter implements Filter {
     private String trustedPathPrefix;
     private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
+
     public TrustedEndpointsFilter(String trustedPort, String trustedPathPrefix) {
         if (trustedPort != null && trustedPathPrefix != null && !"null".equals(trustedPathPrefix)) {
             trustedPortNum = Integer.valueOf(trustedPort);
@@ -26,20 +27,24 @@ public class TrustedEndpointsFilter implements Filter {
         }
     }
 
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         if (trustedPortNum != 0) {
             // 通过外部端口试图访问内部接口，拒绝请求
             if (isRequestForTrustedEndpoint(servletRequest) && servletRequest.getLocalPort() != trustedPortNum) {
-                log.warn("denying request for trusted endpoint on untrusted port");
+                log.warn("=denying request for trusted endpoint on untrusted port =");
+                log.warn("通过外部端口试图访问内部接口,拒绝请求");
                 ((ResponseFacade) servletResponse).setStatus(404);
                 servletResponse.getOutputStream().close();
                 return;
             }
 
+
             // 通过内部端口试图访问外部接口，拒绝请求
             if (!isRequestForTrustedEndpoint(servletRequest) && servletRequest.getLocalPort() == trustedPortNum) {
-                log.warn("denying request for untrusted endpoint on trusted port");
+                log.warn("=denying request for untrusted endpoint on trusted port =");
+                log.warn("=         通过内部端口试图访问外部接口，拒绝请求           =");
                 ((ResponseFacade) servletResponse).setStatus(404);
                 servletResponse.getOutputStream().close();
                 return;
@@ -49,8 +54,10 @@ public class TrustedEndpointsFilter implements Filter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
+
     // 通过 URL 中的路径前缀来判断对应的接口是内部接口还是外部接口
     private boolean isRequestForTrustedEndpoint(ServletRequest servletRequest) {
         return ((RequestFacade) servletRequest).getRequestURI().startsWith(trustedPathPrefix);
+
     }
 }

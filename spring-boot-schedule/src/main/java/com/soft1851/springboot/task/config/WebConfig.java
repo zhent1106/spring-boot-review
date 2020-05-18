@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Author 田震
  * @Date 2020/5/16
  **/
+//@Configuration
 public class WebConfig implements WebMvcConfigurer {
     // 内部端口
     @Value("${server.trustedPort:null}")
