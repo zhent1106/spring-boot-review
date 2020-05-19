@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  tomcat:
+    initialSize: 20
+    maxActive: 100
+    maxIdle: 100
+    minIdle: 20
+    maxWait: 10000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 100MB
+      file-size-threshold: 0
+      location: /test
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  thymeleaf:
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    check-template-location: true
+    servlet:
+      content-type: text/html
+    resources:
+      static-locations: classpath:/
+
+zhent:
+  file:
+    path: D:\7.Study-Files\spring-boot-review\spring-boot-updownload\doc
+    extension: .gif,.jpeg,.png,.jpg,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.txt,.rar,.tif
+
+
+
+
