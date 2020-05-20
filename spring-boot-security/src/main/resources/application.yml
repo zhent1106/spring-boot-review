@@ -1,0 +1,7 @@
+spring:
+  security:
+    user:
+#       add default user
+      name: zhent1106
+      password: zhent1106
+      roles: ONE
