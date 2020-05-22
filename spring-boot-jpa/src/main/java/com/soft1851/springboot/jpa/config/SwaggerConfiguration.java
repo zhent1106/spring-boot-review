@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author Tao
  * @version 1.0
  * @ClassName SwaggerConfiguration
- * @Description swagger配置
+ * @Description swagger配置   启动该swagger：http://localhost:8080/doc.html
  * @date 2020-05-12 20:42
  **/
 @Configuration
@@ -36,7 +36,7 @@ public class SwaggerConfiguration {
                 .title("swagger-bootstrap-ui RESTful APIs")
                 .description("swagger-bootstrap-ui")
                 .termsOfServiceUrl("http://localhost:8080/")
-                .contact(new Contact("tao","https://github.com/taoyongxin","1427177855@qq.com"))
+                .contact(new Contact("zhent","https://github.com/zhent1106","1299088269@qq.com"))
                 .version("1.0")
                 .build();
     }
