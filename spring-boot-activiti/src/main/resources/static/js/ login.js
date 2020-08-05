@@ -15,16 +15,16 @@ app.controller('loginCtrl', function ($scope, $http) {
                 window.location = "/index";
             }
         })
-        // $http({
-        //     url: "/login",
-        //     method: "post",
-        //     params: {
-        //         "userName": $scope.userName,
-        //         "password": $scope.password
-        //     }
-        // }).then(function (response) {
-        //
-        // })
+        $http({
+            url: "/login",
+            method: "post",
+            params: {
+                "userName": $scope.userName,
+                "password": $scope.password
+            }
+        }).then(function (response) {
+
+        })
     }
 
 });

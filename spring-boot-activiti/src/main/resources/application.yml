@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/acticiti-test?useSSL=true
+    url: jdbc:mysql://localhost:3306/activiti?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,3 +18,15 @@ spring:
     #      - **.bpmn
     #      - **.bpmn20.xml
     history-level: full
+    thymeleaf:
+      enabled: true
+      encoding: UTF-8
+      mode: HTML5
+      prefix: classpath:/templates/
+      suffix: .html
+      cache: false
+      check-template-location: true
+      servlet:
+        content-type: text/html
+      resources:
+        static-locations: classpath:/
