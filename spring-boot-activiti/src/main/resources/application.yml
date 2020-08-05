@@ -1,0 +1,20 @@
+
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/acticiti-test?useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # activiti default configuration
+  activiti:
+    database-schema-update: true
+    check-process-definitions: true
+    process-definition-location-prefix: classpath:/processes/
+    #    process-definition-location-suffixes:
+    #      - **.bpmn
+    #      - **.bpmn20.xml
+    history-level: full
